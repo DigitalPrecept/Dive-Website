@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Dive Client</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">  
+    <script src="adapter.js"></script>
+    <style>
+      canvas {
+				display: block;
+				height: 100%;
+				width: 100%;
+			}
+    </style>
+  </head>
+  <body>
+    <script>
+      document.linkback={};
+    </script>
+    <script src="main.js"></script>
+    <div class="w3-container">
+      <div id="initialLoading" class="w3-modal" style="display: block;">
+        <div class="w3-container">
+          Connecting to Relay Server...
+        </div>
+      </div>
+    </div>
+    <div class="w3-container">
+    <div id="id01" class="w3-modal" style="display: none;">
+      <div class="w3-modal-content w3-card-4 w3-animate-top">
+        <header class="w3-container w3-blue">
+          
+          <h2>Enter Game Code</h2>
+        </header>
+    
+        <div class="w3-container">
+          <p>
+            <input id="GameCode" class="w3-input w3-animate-input w3-border" type="text" autocomplete="off">
+          </p>
+          <button class="w3-button w3-blue" id="ConnectButton">Connect</button>
+        </div>
+    
+        <footer class="w3-container w3-blue">
+          <p></p>
+        </footer>
+      </div>
+    </div>
+  </div>
+    <div id="mainContainer" class="w3-container">
+      <div class="w3-bar w3-black">
+        <button class="w3-bar-item w3-button" onclick="document.linkback.openTab('Map',true)">Map</button>
+        <button class="w3-bar-item w3-button" onclick="document.linkback.openTab('Intel')">Intel</button>
+        <button class="w3-bar-item w3-button" onclick="document.linkback.openTab('Manifest')">Manifest</button>
+        <button class="w3-bar-item w3-button" onclick="document.linkback.openTab('Crew')">Crew</button>
+      </div> 
+      <div id="Map" class="w3-panel page" style="display:block;">
+        <!-- <div class="frame">
+          <div id="result"> -->
+          <canvas id="mainCanvas" ></canvas>
+          <p></p>
+        <!-- </div>
+        </div> -->
+      </div>
+      <div id="Intel" class="w3-panel page" style="display:none">
+        <h2>Intel</h2>
+        <p>MacGuffins go here</p>
+      </div>
+      
+      <div id="Manifest" class="w3-panel page" style="display:none">
+        <h2>Manifest</h2>
+        <p>Cargo stuff here</p>
+      </div>
+      
+      <div id="Crew" class="w3-panel page" style="display:none">
+        <h2>Crew</h2>
+        <div class="w3-card">
+          <header class="w3-container w3-blue"><h1>JaneDoe</h1></header>
+          <div class="w3-container">
+            <p>Lorem ipsum...</p>
+          </div>
+        </div>
+      </div>
+
+    
+     
+  </div>
+  </body>
+</html>
